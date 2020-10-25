@@ -11,11 +11,11 @@ AT = "***"
 AS = "***"
 #------------------------------------------------------------
 
-twitter = OAuth1Session(CK, CS, AT, AS)
+tw = OAuth1Session(CK, CS, AT, AS)
 url = "https://api.twitter.com/1.1/statuses/update.json"
-params = {"status" : tweet}
-req = twitter.post(url, params = params) 
+params  {"status" : tweet}
+req = tw.post(url, params = params) 
 if req.status_code == 200:
     print("200 OK")
 else: 
-    print("ERROR : %d"% req.status_code) 
+    print("ERROR : " req.status_code) 
